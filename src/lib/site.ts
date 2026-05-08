@@ -2,7 +2,7 @@ export const SITE = {
   name: "S.S TRADES",
   tagline: "Premium Iron Fabrication",
   owners: ["Yusuf Saifi", "Juber Saifi"],
-  phones: ["8650985573", "7037175331"],
+  phones: ["7037175331"],
   whatsapp: "917037175331",
   address: "Chhapurli Biral Road, Mukandpur (Baghpat), India",
   mapsQuery: "Mukandpur+Baghpat+India",
