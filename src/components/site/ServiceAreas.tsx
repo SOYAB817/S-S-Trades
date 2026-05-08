@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-const areas = ["Dwarka", "Delhi NCR", "Najafgarh", "Baghpat", "Mukandpur", "Sonipat", "Loni", "Ghaziabad"];
+const areas = ["Delhi NCR", "Baghpat", "Shamli", "Muzaffarnagar", "Ghaziabad", "Delhi"];
 export function ServiceAreas() {
   return (
-    <section className="py-32 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section className="site-section relative overflow-hidden">
+      <div className="site-shell px-4 lg:px-8">
         <div className="text-center mb-14">
-          <span className="text-xs uppercase tracking-[0.4em] text-gold">Service Areas</span>
-          <h2 className="mt-4 font-display text-4xl lg:text-5xl font-bold">
+          <span className="section-kicker">Service Areas</span>
+          <h2 className="mt-6 font-display text-4xl lg:text-6xl font-bold">
             Serving <span className="text-gradient-gold">Delhi NCR</span> & Beyond
           </h2>
         </div>
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
           {areas.map((a, i) => (
             <motion.div
               key={a}
@@ -19,7 +19,7 @@ export function ServiceAreas() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="group flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card/40 hover:border-gold hover:bg-gold/5 transition-all"
+              className="pill-chip group px-5 py-3 sm:px-6 hover:border-gold hover:bg-gold/5 transition-all"
             >
               <MapPin className="w-4 h-4 text-gold" />
               <span className="font-medium">{a}</span>

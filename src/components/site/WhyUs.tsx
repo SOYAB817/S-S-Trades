@@ -10,16 +10,16 @@ const items = [
 ];
 export function WhyUs() {
   return (
-    <section id="why" className="py-32 relative">
+    <section id="why" className="site-section relative">
       <div className="absolute inset-0 grain opacity-30" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-[0.4em] text-gold">Why Choose Us</span>
-          <h2 className="mt-4 font-display text-4xl lg:text-5xl font-bold">
+      <div className="site-shell-wide px-4 lg:px-8 relative">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="section-kicker">Why Choose Us</span>
+          <h2 className="mt-6 font-display text-4xl lg:text-6xl font-bold">
             Built On <span className="text-gradient-gold">Trust</span>, Forged To <span className="text-gradient-gold">Last</span>
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {items.map((it, i) => (
             <motion.div
               key={it.title}
@@ -27,7 +27,7 @@ export function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="bg-background hover:bg-card/50 p-10 transition-colors group"
+              className="site-panel rounded-[1.9rem] p-8 sm:p-10 transition-colors group"
             >
               <it.icon className="w-8 h-8 text-gold group-hover:scale-110 transition-transform" />
               <h3 className="mt-5 font-display text-2xl font-semibold">{it.title}</h3>

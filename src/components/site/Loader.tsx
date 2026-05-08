@@ -9,7 +9,7 @@ export function Loader() {
         <motion.div
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
-          className="fixed inset-0 z-[100] bg-ink flex items-center justify-center"
+          className="fixed inset-0 z-[100] bg-[linear-gradient(180deg,rgba(255,249,239,0.98),rgba(246,239,223,0.98))] flex items-center justify-center"
         >
           <div className="text-center">
             <motion.div

@@ -25,25 +25,25 @@ export function Contact() {
     toast.success("Opening WhatsApp...");
   };
   return (
-    <section id="contact" className="py-32 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="contact" className="site-section relative">
+      <div className="site-shell-wide px-4 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.4em] text-gold">Get In Touch</span>
-          <h2 className="mt-4 font-display text-4xl lg:text-5xl font-bold">
+          <span className="section-kicker">Get In Touch</span>
+          <h2 className="mt-6 font-display text-4xl lg:text-6xl font-bold">
             Request A <span className="text-gradient-gold">Free Quote</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">Send us your requirements and we'll respond within hours.</p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid lg:grid-cols-[minmax(20rem,0.86fr)_minmax(0,1.14fr)] gap-6 lg:gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 space-y-4"
+            className="space-y-4"
           >
             {SITE.phones.map((p) => (
-              <a key={p} href={telHref(p)} className="flex items-center gap-4 p-5 rounded-xl border border-border bg-card/60 hover:border-gold/50 hover:bg-gold/5 transition-all group">
+              <a key={p} href={telHref(p)} className="site-panel flex items-center gap-4 p-5 rounded-[1.5rem] hover:border-gold/50 hover:bg-gold/5 transition-all group">
                 <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shadow-gold">
                   <Phone className="w-5 h-5 text-ink" />
                 </div>
@@ -53,7 +53,7 @@ export function Contact() {
                 </div>
               </a>
             ))}
-            <a href={waHref()} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-5 rounded-xl border border-border bg-card/60 hover:border-gold/50 hover:bg-gold/5 transition-all">
+            <a href={waHref()} target="_blank" rel="noreferrer" className="site-panel flex items-center gap-4 p-5 rounded-[1.5rem] hover:border-gold/50 hover:bg-gold/5 transition-all">
               <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shadow-gold">
                 <MessageCircle className="w-5 h-5 text-ink" />
               </div>
@@ -62,7 +62,7 @@ export function Contact() {
                 <div className="font-display text-xl text-foreground">Quick Chat</div>
               </div>
             </a>
-            <div className="flex items-start gap-4 p-5 rounded-xl border border-border bg-card/60">
+            <div className="site-panel flex items-start gap-4 p-5 rounded-[1.5rem]">
               <div className="w-12 h-12 rounded-lg bg-gradient-gold flex items-center justify-center shadow-gold shrink-0">
                 <MapPin className="w-5 h-5 text-ink" />
               </div>
@@ -71,7 +71,7 @@ export function Contact() {
                 <div className="text-foreground leading-relaxed">{SITE.address}</div>
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden border border-border h-56">
+            <div className="rounded-[1.75rem] overflow-hidden border border-border bg-white/70 shadow-card h-56">
               <iframe
                 title="S.S TRADES location"
                 src={`https://www.google.com/maps?q=${SITE.mapsQuery}&output=embed`}
@@ -86,7 +86,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             onSubmit={onSubmit}
-            className="lg:col-span-3 p-8 lg:p-10 rounded-2xl border border-gold/20 bg-card/60 backdrop-blur-sm shadow-elegant space-y-5"
+            className="site-panel p-8 lg:p-10 rounded-[2rem] shadow-elegant space-y-5"
           >
             <div>
               <label className="text-xs uppercase tracking-wider text-muted-foreground">Your Name</label>

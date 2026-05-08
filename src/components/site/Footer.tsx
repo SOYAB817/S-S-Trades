@@ -2,11 +2,11 @@ import { Instagram, Youtube, Facebook, Phone, MapPin } from "lucide-react";
 import { SITE, telHref } from "@/lib/site";
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-ink/60 backdrop-blur-sm pt-20 pb-8">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-4 gap-10">
+    <footer className="border-t border-border/80 bg-[linear-gradient(180deg,rgba(255,248,236,0.94),rgba(247,241,228,0.98))] pt-20 pb-8">
+      <div className="site-shell-wide px-4 lg:px-8 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-md bg-gradient-gold flex items-center justify-center shadow-gold">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-gold flex items-center justify-center shadow-gold">
               <span className="font-display text-ink text-xl font-bold">S</span>
             </div>
             <div>
@@ -43,8 +43,8 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="gold-divider max-w-7xl mx-auto my-10 opacity-30" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
+      <div className="gold-divider site-shell-wide my-10 opacity-40" />
+      <div className="site-shell-wide px-4 lg:px-8 flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
         <div>© {new Date().getFullYear()} S.S TRADES. All rights reserved.</div>
         <div>Crafted with precision in Mukandpur, Baghpat.</div>
       </div>

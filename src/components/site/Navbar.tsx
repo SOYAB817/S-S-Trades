@@ -27,25 +27,25 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-background/85 backdrop-blur-xl border-b border-border/60" : "bg-transparent"
+        scrolled ? "bg-background/72 backdrop-blur-2xl border-b border-border/70 shadow-[0_10px_40px_-26px_rgba(0,0,0,0.35)]" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+      <div className="site-shell-wide flex items-center justify-between h-20 px-4 lg:px-8">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-md bg-gradient-gold flex items-center justify-center shadow-gold">
+          <div className="w-11 h-11 rounded-2xl bg-gradient-gold flex items-center justify-center shadow-gold transition-transform duration-500 group-hover:scale-105">
             <span className="font-display text-ink text-lg font-bold">S</span>
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg tracking-wide text-foreground">S.S TRADES</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-gold">Iron Fabrication</div>
+            <div className="text-[10px] uppercase tracking-[0.3em] text-gold">Iron Fabrication</div>
           </div>
         </a>
-        <nav className="hidden lg:flex items-center gap-9">
+        <nav className="hidden lg:flex items-center gap-3 rounded-full border border-border/80 bg-white/65 px-4 py-2 shadow-[0_20px_40px_-30px_rgba(0,0,0,0.35)] backdrop-blur-xl">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="relative text-sm font-medium text-muted-foreground hover:text-gold transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+              className="relative rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {l.label}
             </a>
@@ -62,10 +62,10 @@ export function Navbar() {
         </button>
       </div>
       {open && (
-        <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border">
-          <div className="px-6 py-6 flex flex-col gap-4">
+        <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="lg:hidden border-t border-border/80 bg-background/95 backdrop-blur-2xl">
+          <div className="site-shell px-4 py-6 flex flex-col gap-3">
             {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-base text-foreground/80 hover:text-gold">
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="rounded-2xl border border-border/70 bg-white/65 px-4 py-3 text-base text-foreground/80 hover:text-gold">
                 {l.label}
               </a>
             ))}
